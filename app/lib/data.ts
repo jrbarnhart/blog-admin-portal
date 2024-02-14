@@ -3,7 +3,7 @@ import { UserLogin, Post, Comment } from "@/app/lib/definitions";
 const api = process.env.BACKEND_API_URL;
 
 // Log in
-export async function logIn(userLogin: UserLogin) {
+export async function getLoginToken(userLogin: UserLogin) {
   // Send request to API then await and return response
   try {
     const jwtoken = await fetch(`${api}/users/login`, {
