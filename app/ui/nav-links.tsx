@@ -9,6 +9,7 @@ const links = [
 export default function NavLinks() {
   return (
     <>
+      {/* loginToken ? null : <Link href="/login">Log In</Link> */}
       {links.map((link) => {
         return (
           <Link key={link.name} href={link.href}>
