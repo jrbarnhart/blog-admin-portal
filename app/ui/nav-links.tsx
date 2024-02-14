@@ -1,15 +1,17 @@
+"use client";
+
 import Link from "next/link";
 
 const links = [
   { name: "Home", href: "/dashboard" },
   { name: "Posts", href: "/dashboard/posts" },
-  { name: "Create Post", href: "/dashboard/create-post" },
 ];
 
 export default function NavLinks() {
+  const token = localStorage.getItem("token");
+
   return (
     <>
-      {/* loginToken ? null : <Link href="/login">Log In</Link> */}
       {links.map((link) => {
         return (
           <Link key={link.name} href={link.href}>
@@ -17,6 +19,11 @@ export default function NavLinks() {
           </Link>
         );
       })}
+      {token ? (
+        <Link href="/dashboard/create-post">Create Post</Link>
+      ) : (
+        <Link href="/login">Log In</Link>
+      )}
     </>
   );
 }
