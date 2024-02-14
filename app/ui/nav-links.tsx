@@ -22,7 +22,7 @@ export default function NavLinks() {
       {token ? (
         <Link href="/dashboard/create-post">Create Post</Link>
       ) : (
-        <Link href="/login">Log In</Link>
+        <Link href="/dashboard/login">Log In</Link>
       )}
     </>
   );
