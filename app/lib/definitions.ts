@@ -1,8 +1,6 @@
-export type User = {
+export type UserLogin = {
   username: string;
-  display_name: string;
   password: string;
-  access: string;
 };
 
 export type Post = {
