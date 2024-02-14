@@ -4,9 +4,8 @@ import NavLinks from "./nav-links";
 export default async function SideNav() {
   return (
     <div className="flex flex-col p-3">
-      <h1 className="text-2xl">Blog Author Portal</h1>
-      <div>
-        {/* loginToken ? null : <Link href="/login">Log In</Link> */}
+      <h1 className="text-2xl text-center">Blog Author Portal</h1>
+      <div className="flex justify-around gap-x-3">
         <NavLinks />
         {/* Logout form goes here*/}
       </div>
