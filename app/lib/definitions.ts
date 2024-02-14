@@ -8,14 +8,14 @@ export type User = {
 export type Post = {
   title: string;
   text: string;
-  // author: mongoose.Schema.Types.ObjectId;
+  author: string;
   date: Date;
   published: boolean;
 };
 
 export type Comment = {
   text: string;
-  // author: mongoose.Schema.Types.ObjectId;
+  author: string;
   date: Date;
-  // post: mongoose.Schema.Types.ObjectId;
+  post: string;
 };
