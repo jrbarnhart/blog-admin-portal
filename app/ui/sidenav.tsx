@@ -1,13 +1,12 @@
 import Link from "next/link";
 import NavLinks from "./nav-links";
 
-export default function SideNav() {
+export default async function SideNav() {
   return (
-    <div>
-      <Link href={"/"}>
-        <h1>Blog Author Portal</h1>
-      </Link>
+    <div className="flex flex-col p-3">
+      <h1 className="text-2xl">Blog Author Portal</h1>
       <div>
+        {/* loginToken ? null : <Link href="/login">Log In</Link> */}
         <NavLinks />
         {/* Logout form goes here*/}
       </div>
