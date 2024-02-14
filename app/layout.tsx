@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import NavLinks from "./ui/nav-links";
+import SideNav from "./ui/sidenav";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,9 +20,7 @@ export default function RootLayout({
       <body
         className={`${inter.className} flex h-screen flex-col md:flex-row md:overflow-hidden`}
       >
-        <nav>
-          <NavLinks />
-        </nav>
+        <SideNav />
         {children}
       </body>
     </html>
