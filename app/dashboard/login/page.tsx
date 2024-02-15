@@ -1,3 +1,12 @@
+"use client";
+
+import { FormEvent } from "react";
+
 export default function Login() {
-  return <p>Login page</p>;
+  return (
+    <>
+      <h2>Log In</h2>
+      {/* <LoginForm /> */}
+    </>
+  );
 }
