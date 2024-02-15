@@ -18,7 +18,6 @@ export default function LoginForm() {
         username: formData.get("username"),
         password: formData.get("password"),
       };
-      console.log(JSON.stringify(body));
 
       const response = await fetch(`http://localhost:8000/users/login`, {
         method: `POST`,
