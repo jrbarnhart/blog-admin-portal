@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import useToken from "../lib/useToken";
 
 const links = [
   { name: "Home", href: "/dashboard" },
@@ -8,7 +9,7 @@ const links = [
 ];
 
 export default function NavLinks() {
-  const token = localStorage.getItem("token");
+  const { token } = useToken();
 
   return (
     <>
