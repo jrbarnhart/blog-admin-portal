@@ -30,7 +30,7 @@ export default function LoginForm() {
 
       const data = await response.json();
 
-      if (!data.success) {
+      if (!data.success || !data.token.admin) {
         // Login unsuccessful so clear form and return error string
         ref.current?.reset();
         return "Incorrect login information.";
