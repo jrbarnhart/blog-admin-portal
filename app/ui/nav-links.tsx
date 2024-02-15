@@ -6,6 +6,7 @@ import useToken from "../lib/useToken";
 const links = [
   { name: "Home", href: "/dashboard" },
   { name: "Posts", href: "/dashboard/posts" },
+  { name: "Create Post", href: "/dashboard/create-post" },
 ];
 
 export default function NavLinks() {
@@ -20,11 +21,6 @@ export default function NavLinks() {
           </Link>
         );
       })}
-      {token ? (
-        <Link href="/dashboard/create-post">Create Post</Link>
-      ) : (
-        <Link href="/dashboard/login">Log In</Link>
-      )}
     </>
   );
 }
