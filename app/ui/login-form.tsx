@@ -7,11 +7,14 @@ const authenticateUser = async (
   formData: FormData
 ) => {
   try {
-    const response = await fetch(`${process.env.BACKEND_API_URL}/users/login`, {
-      method: `POST`,
-      body: formData,
-    });
-    console.log(response);
+    const response = await fetch(
+      `${process.env.NEXT_PUBLIC_BACKEND_API_URL}/users/login`,
+      {
+        method: `POST`,
+        body: formData,
+      }
+    );
+    console.log(process.env.BACKEND_API_URL);
     // const data = await response.json();
   } catch (error) {
     throw error;
