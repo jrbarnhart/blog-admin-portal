@@ -36,7 +36,10 @@ export default function LoginForm() {
         return "Incorrect login information.";
       } else {
         // Login successful so save token and redirect to /dashboard
-        localStorage.setItem("token", data.token);
+        localStorage.setItem(
+          "token",
+          JSON.stringify({ ...data.token, date: new Date() })
+        );
         router.push("/dashboard");
       }
     } catch (error) {
