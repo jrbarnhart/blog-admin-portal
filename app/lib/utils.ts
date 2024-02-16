@@ -5,7 +5,7 @@ export function isTokenExpired() {
   if (token) {
     // Get the token date and current date
     const tokenData = JSON.parse(token);
-    const tokenDateInMillis = tokenData.date.getTime();
+    const tokenDateInMillis = new Date(tokenData.date).getTime();
     const currentDate = new Date();
 
     // Calculate difference
