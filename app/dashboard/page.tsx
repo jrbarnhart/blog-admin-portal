@@ -1,4 +1,17 @@
+"use client";
+
+import { useEffect } from "react";
+import { isTokenExpired } from "../lib/utils";
+import { useRouter } from "next/navigation";
+
 export default function Dashboard() {
+  const router = useRouter();
+
+  useEffect(() => {
+    if (isTokenExpired()) {
+      router.push("/login");
+    }
+  });
   return (
     <main>
       <p>This is some dashboard page content!</p>
