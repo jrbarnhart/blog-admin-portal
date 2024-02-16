@@ -12,6 +12,7 @@ export default function Dashboard() {
       router.push("/login");
     }
   });
+
   return (
     <main>
       <p>This is some dashboard page content!</p>
